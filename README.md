@@ -1,6 +1,6 @@
 # GPPVAE
 
-[Gaussian Process Prior Variational Autoencoder](https://arxiv.org/abs/1810.11738) [1]
+Code accompanying the paper [Gaussian Process Prior Variational Autoencoder](https://arxiv.org/abs/1810.11738) [1].
 
 [1] Casale FP, Dalca AV, Saglietti L, Listgarten J, Fusi N. Gaussian Process Prior Variational Autoencoders, 32nd Conference on Neural Information Processing Systems, 2018, Montreal, Canada.
 
@@ -31,13 +31,7 @@ python get_data.py
 python train_vae.py
 ```
 
-## Run GPPVAE-dis
-
-```bash
-python train_gppvaedis.py
-```
-
-## Run GPPVAE-joint
+## Run GPPVAE
 
 ```bash
 python train_gppvae.py
@@ -51,3 +45,14 @@ If you encounter any issue, please, [report it](https://github.com/limix/limix-c
 
 This project is licensed under the Apache License (Version 2.0, January 2004) -
 see the [LICENSE](LICENSE) file for details
+
+## Citation
+
+If you use any part of this code in your research, please cite our [paper](https://arxiv.org/abs/1810.11738):
+
+@article{casale2018gaussian,
+  title={Gaussian Process Prior Variational Autoencoders},
+  author={Casale, Francesco Paolo and Dalca, Adrian V and Saglietti, Luca and Listgarten, Jennifer and Fusi, Nicolo},
+  journal={arXiv preprint arXiv:1810.11738},
+  year={2018}
+}
