@@ -5,7 +5,7 @@ Code accompanying the paper [Gaussian Process Prior Variational Autoencoder](htt
 [1] Casale FP, Dalca AV, Saglietti L, Listgarten J, Fusi N. Gaussian Process Prior Variational Autoencoders, 32nd Conference on Neural Information Processing Systems, 2018, Montreal, Canada.
 
 <p align="center">
-  <img src="img/gppvae.png" alt="gppvae" width="48%">
+  <img src="img/gppvae.png" alt="gppvae" width="60%">
 </p>
 
 ## Install dependencies
