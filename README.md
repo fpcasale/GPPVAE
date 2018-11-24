@@ -2,7 +2,7 @@
 
 [Gaussian Process Prior Variational Autoencoder](https://arxiv.org/abs/1810.11738) [1]
 
-[1] Casale FP, Dalca AV, Saglietti L, Listgarten J, Fusi N. Gaussian Process Prior Variational Autoencoders, Proceedings of Neural Information Processing Systems, 2018 Oct 28
+[1] Casale FP, Dalca AV, Saglietti L, Listgarten J, Fusi N. Gaussian Process Prior Variational Autoencoders, 32nd Conference on Neural Information Processing Systems, 2018, Montreal, Canada.
 
 ## Install dependencies
 
