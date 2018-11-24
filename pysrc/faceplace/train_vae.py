@@ -117,8 +117,8 @@ def main():
     for epoch in range(opt.epochs):
 
         # train and eval
-        ht = train_ep(vae, train_queue, optimizer, device)
-        hv = eval_ep(vae, val_queue, device)
+        ht = train_ep(vae, train_queue, optimizer)
+        hv = eval_ep(vae, val_queue)
         smartAppendDict(history, ht)
         smartAppendDict(history, hv)
         logging.info(
@@ -134,7 +134,7 @@ def main():
             callback(epoch, val_queue, vae, history, ffile, device)
 
 
-def train_ep(vae, train_queue, optimizer, device):
+def train_ep(vae, train_queue, optimizer):
 
     rv = {}
     vae.train()
@@ -163,7 +163,7 @@ def train_ep(vae, train_queue, optimizer, device):
     return rv
 
 
-def eval_ep(vae, val_queue, device):
+def eval_ep(vae, val_queue):
     rv = {}
     vae.eval()
 
