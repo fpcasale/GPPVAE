@@ -50,9 +50,11 @@ see the [LICENSE](LICENSE) file for details
 
 If you use any part of this code in your research, please cite our [paper](https://arxiv.org/abs/1810.11738):
 
+```
 @article{casale2018gaussian,
   title={Gaussian Process Prior Variational Autoencoders},
   author={Casale, Francesco Paolo and Dalca, Adrian V and Saglietti, Luca and Listgarten, Jennifer and Fusi, Nicolo},
   journal={arXiv preprint arXiv:1810.11738},
   year={2018}
 }
+```
