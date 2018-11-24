@@ -28,13 +28,17 @@ python get_data.py
 ## Run VAE
 
 ```bash
-python train_vae.py
+python train_vae.py --outdir ./out/vae
 ```
 
 ## Run GPPVAE
 
+For optimal performance, the autoencoder parameters of the GPPVAE model should be initialized to those of a pretrained VAE (see above). 
+This can be done reusing the output of the run vae command.
+For example, if the vae results are contained in ./out/vae and one has trained VAE for 1000 epochs, then one can use:
+
 ```bash
-python train_gppvae.py
+python train_gppvae.py --outdir ./out/gppvae --vae_cfg ./out/vae/vae.cfg.p --vae_weights ./out/vae/weights.09999.pt
 ```
 
 ## Problems
