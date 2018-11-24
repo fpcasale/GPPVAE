@@ -27,6 +27,8 @@ python get_data.py
 
 ## Run VAE
 
+Plots and weights are dumped in the specified output dir every pre-determined number of epochs, which can be specified using the parameters ``epoch_cb``.
+
 ```bash
 python train_vae.py --outdir ./out/vae
 ```
