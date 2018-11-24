@@ -1,8 +1,12 @@
 # GPPVAE
 
-[Gaussian Process Prior Variational Autoencoder](https://arxiv.org/abs/1810.11738) [1]
+Code accompanying the paper [Gaussian Process Prior Variational Autoencoder](https://arxiv.org/abs/1810.11738) [1].
 
 [1] Casale FP, Dalca AV, Saglietti L, Listgarten J, Fusi N. Gaussian Process Prior Variational Autoencoders, 32nd Conference on Neural Information Processing Systems, 2018, Montreal, Canada.
+
+<p align="center">
+  <img src="img/gppvae.png" alt="gppvae" width="48%">
+</p>
 
 ## Install dependencies
 
@@ -27,20 +31,20 @@ python get_data.py
 
 ## Run VAE
 
+Plots and weights are dumped in the specified output dir every pre-determined number of epochs, which can be specified using the parameters ``epoch_cb``.
+
 ```bash
-python train_vae.py
+python train_vae.py --outdir ./out/vae
 ```
 
-## Run GPPVAE-dis
+## Run GPPVAE
+
+For optimal performance, the autoencoder parameters of the GPPVAE model should be initialized to those of a pretrained VAE (see above). 
+This can be done reusing the output of the run vae command.
+For example, if the vae results are contained in ./out/vae and one has trained VAE for 1000 epochs, then one can use:
 
 ```bash
-python train_gppvaedis.py
-```
-
-## Run GPPVAE-joint
-
-```bash
-python train_gppvae.py
+python train_gppvae.py --outdir ./out/gppvae --vae_cfg ./out/vae/vae.cfg.p --vae_weights ./out/vae/weights.09999.pt
 ```
 
 ## Problems
@@ -51,3 +55,16 @@ If you encounter any issue, please, [report it](https://github.com/limix/limix-c
 
 This project is licensed under the Apache License (Version 2.0, January 2004) -
 see the [LICENSE](LICENSE) file for details
+
+## Citation
+
+If you use any part of this code in your research, please cite our [paper](https://arxiv.org/abs/1810.11738):
+
+```
+@article{casale2018gaussian,
+  title={Gaussian Process Prior Variational Autoencoders},
+  author={Casale, Francesco Paolo and Dalca, Adrian V and Saglietti, Luca and Listgarten, Jennifer and Fusi, Nicolo},
+  journal={arXiv preprint arXiv:1810.11738},
+  year={2018}
+}
+```
