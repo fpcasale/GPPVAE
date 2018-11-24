@@ -45,7 +45,7 @@ python train_gppvae.py
 
 ## Problems
 
-If you encounter any problem, please contact [Francesco Paolo Casale](frcasale@microsoft.com).
+If you encounter any issue, please, [report it](https://github.com/limix/limix-core/issues/new).
 
 ## License
 
