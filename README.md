@@ -22,9 +22,10 @@ conda install -y pytorch=0.4.1 -c soumit
 conda install -y torchvision=0.2.1
 ```
 
-## Downloading and formatting the data
+## Preprocessing the data
 
-After cloning this respository:
+The face dataset is available at [http://wiki.cnbc.cmu.edu/Face_Place](http://wiki.cnbc.cmu.edu/Face_Place).
+The data can be preprocessed as follows:
 
 ```bash
 cd GPPVAE/pysrc/faceplace
