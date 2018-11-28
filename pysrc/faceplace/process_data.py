@@ -9,16 +9,16 @@ from scipy.misc import imresize
 import os
 import h5py
 
+# where have been downloaded
+data_dir = sys.argv[1]
 
 def main():
-
-    data_dir = "../data/faceplace"
 
     # 1. download and unzip data
     download_data(data_dir)
 
     # 2. load data
-    RV = import_data(data_dir)
+    RV = import_data()
 
     # 3. split train, validation and test
     RV = split_data(RV)
@@ -31,7 +31,7 @@ def main():
     fout.close()
 
 
-def download_data(data_dir):
+def unzip_data():
 
     if not os.path.exists(data_dir):
         os.makedirs(data_dir)
@@ -44,17 +44,12 @@ def download_data(data_dir):
         "multiracial.zip",
     ]
 
-    base_url = "http://wiki.cnbc.cmu.edu/images"
-
     for fname in fnames:
-        url = os.path.join(base_url, fname)
-        print(".. downloading %s" % url)
-        download(url, data_dir)
         print(".. unzipping")
         unzip(os.path.join(data_dir, fname), data_dir)
 
 
-def import_data(data_dir, size=128):
+def import_data(size=128):
 
     files = []
     orients = ["00F", "30L", "30R", "45L", "45R", "60L", "60R", "90L", "90R"]
