@@ -29,7 +29,7 @@ The data can be preprocessed as follows:
 
 ```bash
 cd GPPVAE/pysrc/faceplace
-python get_data.py
+python preprocess_data.py
 ```
 
 ## Run VAE
